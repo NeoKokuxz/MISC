@@ -16,10 +16,14 @@ class BinaryTree {
             else {
                 // if the key is found
                 //check left subtree
-                if(root.left != null){
+                while(root.left != null){
                   count++;
+                  //Check leftsubtree until nil
+                  root = root.left;
                 //check right subtree
                 } else if (root.right != null) {
+                  //check right subtree until nil
+                  root = root.right;  
                   count++; 
                 }
             }
